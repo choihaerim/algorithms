@@ -1,13 +1,15 @@
-num = int(input())
-check = num
-new_num = 0
-temp = 0
+input_data = int(input())
 count = 0
+N = input_data
+num = N
+
 while True:
-    temp = num//10 + num%10
-    new_num = (num%10)*10 + temp%10
+    num_1 = num // 10
+    num_2 = num % 10
+    num_3 = (num_1 + num_2) % 10
+    num = (num_2 * 10) + num_3
     count += 1
-    num = new_num
-    if new_num == check:
+
+    if num == N:
+        print(count)
         break
-print(count)
