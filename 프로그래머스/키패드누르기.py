@@ -11,6 +11,7 @@ def solution(numbers, hand):
     
     for i in numbers:
         now = dic[i]
+        
         if i in [1, 4, 7]:
             answer += 'L'
             left_s = now
